@@ -8,15 +8,33 @@
 Deliver:
 
 *   [ ] Re-write the instructions in your own words.
-    *   If you don't do this, you won't know what you're supposed to do!
-    *   Don't leave out details!
+
+    *   The goal is to create a Tic-Tac-Toe computer game that uses machine learning so the computer will never lose. The AI should either win or tie, never lose. Modes to be created for this console-based game are AI v AI, AI v Human, Human v AI, and Human v Human. The game should be colorful and look nice for the player.
+
 *   [ ] Explain the problem this program aims to solve.
+ 
+    *   The human player(s) should be able to play as either 'X' or 'O'. 
+
     *   Describe what a *good* solution looks like.
+
+    *   A good solution is one where the AI always wins or ties, the interface is simple and attractive, and the game doesn't crash or glitch in any way.
+
     *   List what you already know how to do.
+
+    *   I already know how to edit code and check for possible errors
+
     *   Point out any challenges that you can foresee.
+
+    *   I do not know how to properly put code into partitions that make human readability easier
+
 *   [ ] List all of the data that is used by the program, making note of where it comes from.
     *   Explain what form the output will take.
+
+    *   The output will be a Tic-Tac-Toe game board most of the time with open cells showing their corresponding identifying number, and taken cells showing whether it is an 'X' or 'O'. There will also be output showing which player won a game (when applicable), and if an input is not accepted a clear message will show what input should be given.
+
 *   [ ] List the algorithms that will be used (but don't write them yet).
+
+    *   MANY
 
 
 ## Phase 1: Design
