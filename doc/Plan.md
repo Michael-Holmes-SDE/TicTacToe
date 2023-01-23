@@ -34,7 +34,7 @@ Deliver:
 
 *   [ ] List the algorithms that will be used (but don't write them yet).
 
-    *   MANY
+    *   Already included ********************
 
 
 ## Phase 1: Design
