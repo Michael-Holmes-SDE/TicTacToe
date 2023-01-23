@@ -28,7 +28,7 @@
 # /_/ |_/___/   /_/  \__/\_,_/_/_/_/  	  	  
 
 import random  	  	  
-from model.py import MODEL
+from model import MODEL
 
 def open_cells(b):  	  	  
     """ Returns a tuple of the unmarked cells in a Tic-Tac-Toe board """  	  	  
