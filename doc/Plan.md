@@ -13,7 +13,7 @@ Deliver:
 
 *   [ ] Explain the problem this program aims to solve.
  
-    *   The human player(s) should be able to play as either 'X' or 'O'. 
+    *   The human player(s) should be able to play as either 'X' or 'O'. The CPU should use AI at some point because the client wants to use the buzzwords Machine Learning for popularity. 
 
     *   Describe what a *good* solution looks like.
 
@@ -25,12 +25,12 @@ Deliver:
 
     *   Point out any challenges that you can foresee.
 
-    *   I do not know how to properly put code into partitions that make human readability easier
+    *   I do not know how to properly put code into partitions that make human readability easier and I will need to learn how to do so.
 
 *   [ ] List all of the data that is used by the program, making note of where it comes from.
     *   Explain what form the output will take.
 
-    *   The output will be a Tic-Tac-Toe game board most of the time with open cells showing their corresponding identifying number, and taken cells showing whether it is an 'X' or 'O'. There will also be output showing which player won a game (when applicable), and if an input is not accepted a clear message will show what input should be given.
+    *   The output will be a Tic-Tac-Toe game board most of the time with open cells showing their corresponding identifying number, and taken cells showing whether it is an 'X' or 'O'. The program will use data from a tuple of the board to see which cells are open and if the game has been won and by which player, with output showing which player won a game (when applicable), and if an input is not accepted a clear message will show what input(s) should/can be given.
 
 *   [ ] List the algorithms that will be used (but don't write them yet).
 
@@ -52,6 +52,21 @@ Deliver:
     *   Pseudocode != source code.  Do not paste your finished source code into this part of the plan.
     *   Explain what happens in the face of good and bad input.
     *   Write a few specific examples that occurred to you.
+
+
+    [ ] Modules I plan to make:
+    *   boardAiTeam
+        open_cells and first_open_cell functions I think were from the AI team, and the following functions: get_human_move, make_board, place, horizontal_winner, vertical_winner, diagonal_winner, pos_to_rowcol, rowcol_to_pos, and full.
+    *   boardUiTeam (same as boardAiTeam but with Ui functions for open and first open cells)
+        open_cells and first_open_cell functions I think were from the UI team, and the following functions: get_human_move, make_board, place, horizontal_winner, vertical_winner, diagonal_winner, pos_to_rowcol, rowcol_to_pos, and full.
+    *   strategy
+    	The following functions: strategy_dumb, strategy_random, strategy_oracle
+    *   model
+	The entire MODEL tuple
+    *   graphics
+        The following functions: logo, show, black, red, green, yellow, blue, magenta, cyan, white, color, home, and clear.  
+    *   ttt.py
+	Contains the remaining functions. These should include all of and only the following functions: player_select, winner, human_turn, cpu_turn, keep_playing, cpu_vs_cpu, cpu_vs_human, human_vs_human, human_vs_cpu, game, and if __name__ == '__main__'.
 
 
 ## Phase 2: Implementation
