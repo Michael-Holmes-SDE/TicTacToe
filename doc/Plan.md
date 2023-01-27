@@ -100,6 +100,7 @@ Deliver:
 	8. O plays 9
 	9. Respond with 3, drawing the game
 
+    *  **A Human playing as 'X'**:
 
 	1. Open with 2
 	2. O plays 1
@@ -111,6 +112,7 @@ Deliver:
 	8. O plays 4
 	9. Respond with 9, drawing the game
 
+    *  **A Human playing as 'X'**:
 
 	1. Open with 3
 	2. O plays 5
@@ -133,6 +135,7 @@ Deliver:
 	6. Respond with 6
 	7. X plays 9, winning the game
 	
+    * **A Human playing as 'O'**:
 
 	1. X opens with 2
 	2. Respond with 8
@@ -144,6 +147,7 @@ Deliver:
 	8. Respond with 9
 	9. X plays 6, drawing the game
 
+    * **A Human playing as 'O'**:
 
 	1. X opens with 3
 	2. Respond with 4
