@@ -20,6 +20,7 @@ def first_open_cell(b):
     else:
         return None
 
+
 def get_human_move(board, letter):  	  	  
     """  	  	  
     Ask a human which move to take, or whether they want to quit.  	  	  

@@ -29,8 +29,8 @@
 
 from time import sleep
 from board import *
-from graphics import *  # Importing without all (do each one individual)
-from strategy import *  # THIS IS A TEST, REVERT TO 'strategy'
+from graphics import *
+from strategy import *
 CPU_DELAY = 0.75
 
 

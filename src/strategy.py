@@ -55,7 +55,6 @@ def strategy_oracle(b):
                 findx = True
                 break
     if not findx:
-        print("Choosing random cell")   # This is a test
         return random.choice(open_cells(b))
 
     oneDimensionB = []
@@ -64,7 +63,6 @@ def strategy_oracle(b):
             oneDimensionB.append(l)
     for i in range(len(MODEL)):
         for j in range(len(MODEL[i])):
-            print(MODEL[i][j])
             if tuple(oneDimensionB) == MODEL[i][j]:
                 del oneDimensionB
                 return int(i + 1)

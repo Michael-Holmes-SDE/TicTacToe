@@ -1,9 +1,4 @@
-#from boardUiTeam import *  # Change to boardUiTeam to test that module
-#from strategy import *  # This statement SHOULD be unnecessary
-#from model import *
-
-
-def logo():  	  	  
+def logo():
     """Display the game's colorful logo"""  	  	  
     print()  	  	  
     print(red('888888888               '), yellow('888888888                '), green('888888888                 '))  	  	  
