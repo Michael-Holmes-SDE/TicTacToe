@@ -1,32 +1,31 @@
 import random
-from boardAiTeam import *  # Change to boardUiTeam to test that module
-from strategy import *
+from board import first_open_cell
+from board import open_cells
 from model import *
-from graphics import *
+from ttt import *
 
 
-def strategy_dumb(b):  	  	  
-    """Picks the first open square  	  	  
+def strategy_dumb(b):
+    """Picks the first open square
 
-    If it happens that NO squares are left, this function returns None, by default.  	  	  
-    However, that should never happen.  In a "real" game at least one square is  	  	  
-    always open, and the return statement will ALWAYS be reached.  	  	  
-    """  	  	  
-    return first_open_cell(b)  	  	  
-
-
-def strategy_random(b):  	  	  
-    """Picks an open square at random  	  	  
-
-    If it happens that NO squares are left, this function will raise IndexError.  	  	  
-    However, that should never happen.  In a "real" game at least one square is  	  	  
-    always open.  	  	  
-    """  	  	  
-    return random.choice(open_cells(b))  	  	  
+    If it happens that NO squares are left, this function returns None, by default.
+    However, that should never happen.  In a "real" game at least one square is
+    always open, and the return statement will ALWAYS be reached.
+    """
+    return first_open_cell(b)
 
 
+def strategy_random(b):
+    """Picks an open square at random
 
-def strategy_oracle(b):  	  	  
+    If it happens that NO squares are left, this function will raise IndexError.
+    However, that should never happen.  In a "real" game at least one square is
+    always open.
+    """
+    return random.choice(open_cells(b))
+
+
+def strategy_oracle(b):
     """  	  	  
     CPU picks the optimal move by consulting a ML-trained model.  Technically  	  	  
     it's just a lookup table, but it was made with a program, so it was  	  	  
@@ -48,14 +47,24 @@ def strategy_oracle(b):
     Every possible game state is found in MODEL.  I am 99% positive that is  	  	  
     impossible to reach the final `return False` statement at the end of the  	  	  
     function.  	  	  
-    """  	  	  
-    if "X" not in b:  	  	  
-        return random.choice(open_cells(b))  	  	  
-    for i in range(len(MODEL)):  	  	  
-        for p in board:  	  	  
-            if type(p) is int:  	  	  
-                for j in range(len(MODEL[i])):  	  	  
-                    if b == MODEL[i][j]:  	  	  
-                        return i  	  	  
-    print("If you see this message, the Oracle does not recognize the current board")  	  	  
-    return False  	  	  
+    """
+    findx = False
+    for i in b:
+        for j in i:
+            if j == "X":
+                findx = True
+                break
+    if not findx:
+        print("Choosing random cell")   # This is a test
+        return random.choice(open_cells(b))
+
+    oneDimensionB = []
+    for k in b:
+        for l in k:
+            oneDimensionB.append(l)
+    for i in range(len(MODEL)):
+        for j in range(len(MODEL[i])):
+            print(MODEL[i][j])
+            if tuple(oneDimensionB) == MODEL[i][j]:
+                del oneDimensionB
+                return int(i + 1)

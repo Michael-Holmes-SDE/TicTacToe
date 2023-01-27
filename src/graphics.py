@@ -1,6 +1,6 @@
-from boardAiTeam import *  # Change to boardUiTeam to test that module
-from strategy import *  # This statement SHOULD be unnecessary
-from model import *
+#from boardUiTeam import *  # Change to boardUiTeam to test that module
+#from strategy import *  # This statement SHOULD be unnecessary
+#from model import *
 
 
 def logo():  	  	  

@@ -7,11 +7,11 @@
 
 Deliver:
 
-*   [ ] Re-write the instructions in your own words.
+*   [X] Re-write the instructions in your own words.
 
     *   The goal is to create a Tic-Tac-Toe computer game that uses machine learning so the computer will never lose. The AI should either win or tie, never lose. Modes to be created for this console-based game are AI v AI, AI v Human, Human v AI, and Human v Human. The game should be colorful and look nice for the player.
 
-*   [ ] Explain the problem this program aims to solve.
+*   [X] Explain the problem this program aims to solve.
  
     *   The human player(s) should be able to play as either 'X' or 'O'. The CPU should use AI at some point because the client wants to use the buzzwords Machine Learning for popularity. 
 
@@ -29,12 +29,13 @@ Deliver:
 
 *   [ ] List all of the data that is used by the program, making note of where it comes from.
     *   Explain what form the output will take.
-
+	
+    *	The input will be numbers inputted in the command line, with 0, 1, 2, and 3 being entered at the beginning to choose the game mode and 1-9 throughout to choose which cell to mark. 'q' will always be an available input and will exit a current game if in one and if on the menu it will close the program.	
     *   The output will be a Tic-Tac-Toe game board most of the time with open cells showing their corresponding identifying number, and taken cells showing whether it is an 'X' or 'O'. The program will use data from a tuple of the board to see which cells are open and if the game has been won and by which player, with output showing which player won a game (when applicable), and if an input is not accepted a clear message will show what input(s) should/can be given.
 
 *   [ ] List the algorithms that will be used (but don't write them yet).
 
-    *   Already included ********************
+    *   Algorithms are already included
 
 
 ## Phase 1: Design
@@ -77,7 +78,8 @@ Deliver:
 *   [ ] More or less working code.
 *   [ ] Note any relevant and interesting events that happened while you wrote the code.
     *   e.g. things you learned, things that didn't go according to plan
-
+    *   Many things didn't go according to plan. Once I'd separated the program into modules there were a miriad of problems with import statements not being in the right modules, with cyclical imports which I didn't know existed, with a function trying to access a value in a tuple that didn't actually exist, and the open_cells function that returned None (more on that below).
+    *   (IDK) An interesting thing I figured out was that the open_cells function (from the UI team, which I had decided on using) was returning None, so my thoughts were the Oracle strategy thought every space was blank and therefore did the default option of choosing a random cell. However, when I ran the code in a human vs human game I was not able to select a cell that had already been selected. 
 
 ## Phase 3: Testing and Debugging
 *(30% of your effort)*
