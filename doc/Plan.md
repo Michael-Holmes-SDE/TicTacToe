@@ -63,6 +63,9 @@ Deliver:
 	Contains the remaining functions. These should include all of and only the following functions: player_select, winner, human_turn, cpu_turn, keep_playing, cpu_vs_cpu, cpu_vs_human, human_vs_human, human_vs_cpu, game, and if __name__ == '__main__'.
 
 
+    *   **In the end, the two board modules were integrated, with the Ui team's functions being used**
+
+
 ## Phase 2: Implementation
 *(15% of your effort)*
 
@@ -80,84 +83,75 @@ Deliver:
 
 Deliver:
 
-*   [ ] A set of test cases that you have personally run on your computer.
-    *   Include a description of what happened for each test case.
+*   [X] A set of test cases that you have personally run on your computer.
     *   A bug I found was that the AI seemed to choose a random cell instead of the one outlined in the AI team's test cases (it turns out it was actually random). This was fixed by modifying the open-cells and strategy-oracle functions as stated above in Phase 2: Implementation by temporarily switching tuples between one and two dimensions
-
-
     *   The main test case I used was the easter egg, where it runs dozens of automated AI vs AI games quickly and did a keyword search for win I found there were none, meaning that each game was a draw just like it's supposed to be. This test can be done by typing without apostrophes 'joshua' into the prompt from the main screen of the game(the one with the tic-tac-toe logo)
     *   I used the set of test cases created by the AI team. For the sake of space I will only include the test cases I used:
-    **  A Human playing as 'X':
 
-	Open with 1
+    *  **A Human playing as 'X'**:
 
-	O plays 5
-	Respond with 7
-	O plays 4
-	Respond with 6
-	O plays 2
-	Respond with 8
-	O plays 9
-	Respond with 3, drawing the game
-
-
-	Open with 2
-	
-	O plays 1
-	Respond with 5
-	O plays 8
-	Respond with 7
-	O plays 3
-	Respond with 6
-	O plays 4
-	Respond with 9, drawing the game
+	1. Open with 1
+	2. O plays 5
+	3. Respond with 7
+	4. O plays 4
+	5. Respond with 6
+	6. O plays 2
+	7. Respond with 8
+	8. O plays 9
+	9. Respond with 3, drawing the game
 
 
-	Open with 3
+	1. Open with 2
+	2. O plays 1
+	3. Respond with 5
+	4. O plays 8
+	5. Respond with 7
+	6. O plays 3
+	7. Respond with 6
+	8. O plays 4
+	9. Respond with 9, drawing the game
 
-	O plays 5
-	Respond with 9
-	O plays 6
-	Respond with 4
-	O plays 1
-	Respond with 8
-	O plays 7
-	Respond with 2, drawing the game
+
+	1. Open with 3
+	2. O plays 5
+	3. Respond with 9
+	4. O plays 6
+	5. Respond with 4
+	6. O plays 1
+	7. Respond with 8
+	8. O plays 7
+	9. Respond with 2, drawing the game
 
 
-    ** A Human playing as 'O':
+    * **A Human playing as 'O'**:
 
-	X opens with 1
-
-	Respond with 3
-	X plays 4
-	Respond with 7
-	X plays 5
-	Respond with 6
-	X plays 9, winning the game
+	1. X opens with 1
+	2. Respond with 3
+	3. X plays 4
+	4. Respond with 7
+	5. X plays 5
+	6. Respond with 6
+	7. X plays 9, winning the game
 	
 
-	X opens with 2
+	1. X opens with 2
+	2. Respond with 8
+	3. X plays 1
+	4. Respond with 3
+	5. X plays 7
+	6. Respond with 4
+	7. X plays 5
+	8. Respond with 9
+	9. X plays 6, drawing the game
 
-	Respond with 8
-	X plays 1
-	Respond with 3
-	X plays 7
-	Respond with 4
-	X plays 5
-	Respond with 9
-	X plays 6, drawing the game
 
-
-	X opens with 3
-
-	Respond with 4
-	X plays 1
-	Respond with 2
-	X plays 5
-	Respond with 7
-	X plays 9, winning the game
-
+	1. X opens with 3
+	2. Respond with 4
+	3. X plays 1
+	4. Respond with 2
+	5. X plays 5
+	6. Respond with 7
+	7. X plays 9, winning the game
 
 
 ## Phase 4: Deployment
@@ -166,12 +160,12 @@ Deliver:
 Deliver:
 
 *   [X] Your repository is pushed to GitLab.
-*   [ ] **Verify** that your final commit was received by browsing to its project page on GitLab.
+*   [X] **Verify** that your final commit was received by browsing to its project page on GitLab.
     *   Ensure the project's URL is correct.
     *   Review the project to ensure that all required files are present and in correct locations.
     *   Check that unwanted files have not been included.
     *   Make any final touches to documentation, including the Sprint Signature and this Plan.
-*   [ ] **Validate** that your submission is complete and correct by cloning it to a new location on your computer and re-running it.
+*   [X] **Validate** that your submission is complete and correct by cloning it to a new location on your computer and re-running it.
 	*	Run your program from the command line so you can see how it will behave when your grader runs it.  **Running it in PyCharm is not good enough!**
     *   Run through your test cases to avoid nasty surprises.
     *   Check that your documentation files are all present.
